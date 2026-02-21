@@ -29,15 +29,15 @@ jobs:
 
       - name: Build backend exe
         working-directory: services/local_api
-        run: |
-          pyinstaller --onefile ^
-            --hidden-import passlib.handlers.bcrypt ^
-            --hidden-import bcrypt ^
-            --hidden-import passlib ^
-            --hidden-import passlib.registry ^
-            --collect-submodules passlib ^
-            --collect-submodules bcrypt ^
-            --name lcai_api app/main.py
+        run: >
+          pyinstaller --onefile
+          --hidden-import passlib.handlers.bcrypt
+          --hidden-import bcrypt
+          --hidden-import passlib
+          --hidden-import passlib.registry
+          --collect-submodules passlib
+          --collect-submodules bcrypt
+          --name lcai_api app/main.py
 
       - name: Copy backend exe into Tauri
         run: |
