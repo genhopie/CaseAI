@@ -6,6 +6,8 @@
       --hidden-import bcrypt ^
       --hidden-import passlib ^
       --hidden-import passlib.registry ^
+      --collect-submodules passlib ^
+      --collect-submodules bcrypt ^
       --name lcai_api app/main.py
 
 on:
