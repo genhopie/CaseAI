@@ -23,13 +23,13 @@
     }
   },
   "bundle": {
-    "active": true,
-    "targets": [
-      "msi"
-    ],
-    "icon": [],
-    "resources": [
-      "bin/lcai_api.exe"
-    ]
+  "active": true,
+  "targets": ["msi"],
+  "icon": [
+    "icons/icon.ico"
+  ],
+  "resources": [
+    "bin/lcai_api.exe"
+  ]
   }
 }
