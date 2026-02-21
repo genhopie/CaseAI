@@ -1,4 +1,12 @@
-name: Build Windows MSI (Frontend + Backend)
+- name: Build backend exe
+  working-directory: services/local_api
+  run: |
+    pyinstaller --onefile ^
+      --hidden-import passlib.handlers.bcrypt ^
+      --hidden-import bcrypt ^
+      --hidden-import passlib ^
+      --hidden-import passlib.registry ^
+      --name lcai_api app/main.py
 
 on:
   push:
