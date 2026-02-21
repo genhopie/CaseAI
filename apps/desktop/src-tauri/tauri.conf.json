@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "LocalCaseAI",
+  "version": "0.1.0",
+  "identifier": "com.localcaseai",
+  "build": {
+    "beforeDevCommand": "npm run dev:desktop",
+    "beforeBuildCommand": "npm run build:desktop",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Local Case AI",
+        "width": 1200,
+        "height": 800,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "msi"
+    ],
+    "icon": [],
+    "resources": [
+      "bin/lcai_api.exe"
+    ]
+  }
+}
