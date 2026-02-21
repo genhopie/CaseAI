@@ -5,7 +5,7 @@ fn main() {
     tauri::Builder::default()
         .setup(|app| {
             let resource_dir = app
-                .path_resolver()
+                .path()
                 .resource_dir()
                 .expect("failed to get resource dir");
 
